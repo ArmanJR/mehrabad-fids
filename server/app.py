@@ -22,9 +22,11 @@ def get_value():
         "ground_speed",
         "vertical_speed",
         "time_details",
+        "latitude",
+        "longitude"
     ]
     # almost whole Shiraz provicne zone
-    zone_iran = "29.996625,29.185917,51.967958,53.478513"
+    zone_iran = "32.288310,30.957088,53.770085,55.528620"
 
     flights = fr_api.get_flights(bounds=zone_iran)
 
