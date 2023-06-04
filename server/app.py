@@ -1,5 +1,5 @@
 import json
-from FlightRadar24.api import FlightRadar24API, Flight
+from FlightRadar24.api import FlightRadar24API
 from flask import Flask
 
 app = Flask(__name__)
@@ -12,7 +12,6 @@ def hello_world():
 
 @app.route("/fids", methods=["GET"])
 def get_value():
-    # j = {"dest": "", "number": "", "aircraft_model": "", "airline_name": ""}
     fr_api = FlightRadar24API()
     req_params = [
         "number",
@@ -24,18 +23,21 @@ def get_value():
         "vertical_speed",
         "time_details",
     ]
-    # almost whole Tehran provine zone
+    # almost whole Shiraz provicne zone
     zone_iran = "29.996625,29.185917,51.967958,53.478513"
 
     flights = fr_api.get_flights(bounds=zone_iran)
+
+    # iterate over first 3 flights only - for testing purpose
+    flights = flights[0:2]
+
     if len(flights) != 0:
-        # iterate over first 3 flights only - for testing purpose
-        for flight in flights[0:2]:
+        for flight in flights:
             details = fr_api.get_flight_details(flight.id)
             flight.set_flight_details(details)
 
     selected_flights = [
-        {key: getattr(flight, key) for key in req_params} for flight in flights[0:2]
+        {key: getattr(flight, key) for key in req_params} for flight in flights
     ]
     return json.dumps(selected_flights)
 
