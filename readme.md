@@ -5,7 +5,6 @@ include some changes as per below:
 1. consider latest FlightRadar24API changes (to get flights details)
 2. custom zone setter
 3. custom required parameters to reduce json file size
-4. run on PM2 service instead of uwsgi (as agile service)
 
 # Mehrabad FIDS
 
