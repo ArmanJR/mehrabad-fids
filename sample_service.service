@@ -1,0 +1,13 @@
+[Unit]
+Description=runf lask ws
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/mehrabad-fids/
+ExecStart=/home/ubuntu/mehrabad-fids/.venv/bin/gunicorn -w 2 -b 0.0.0.0:5050 wsgi:app --chdir server
+/
+
+[Install]
+WantedBy=multi-user.target
