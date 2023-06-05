@@ -26,12 +26,14 @@ def get_value():
         "longitude",
     ]
     # almost whole Shiraz provicne zone
-    zone_iran = "35.871648,35.413727,51.105262,51.752562"
+    # zone_iran = "35.871648,35.413727,51.105262,51.752562"
+    # iran center zone
+    zone_iran = "34.059798,30.102942,51.068005,57.641166"
 
     flights = fr_api.get_flights(bounds=zone_iran)
 
     # iterate over first 3 flights only - for testing purpose
-    flights = flights[0:2]
+    # flights = flights[0:2]
 
     if len(flights) != 0:
         for flight in flights:
