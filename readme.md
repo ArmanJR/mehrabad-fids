@@ -27,7 +27,3 @@ Contributions in the form of pull requests are welcome.
 
 ## License
 This project is licensed under the WTFPL License.
-
-## Author Meassage
-Coding is my language, but love is my message ❤️
-All my love, compiled in this code ❤️👩‍💻
