@@ -1,6 +1,8 @@
 # Mehrabad FIDS
 Codes for ESP32 + 1602 LCD Mehrabad FIDS
 
+![use case gif](./assets/use_case.gif)
+
 ## Hardware
 - ESP32 microcontroller
 - 1602 LCD with IIC/I2C/TWI
