@@ -1,5 +1,5 @@
 # Mehrabad FIDS
-This repository contains codes for `ESP32 microcontroller` and `1602 LCD` with `IIC/I2C/TWI` for Mehrabad Flight Information Display System (`FIDS`).
+This repository contains codes of [this tweet](https://twitter.com/itsArmanj/status/1665100915819307015?s=20): `ESP32 microcontroller` and `1602 LCD` with `IIC/I2C/TWI` for Mehrabad Flight Information Display System (`FIDS`).
 
 The system displays flight information such as flight number, destination, and status on the LCD screen.
 
